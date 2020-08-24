@@ -1,0 +1,25 @@
+.products {}
+
+.product {
+    height: 300px;
+    width: 200px;
+    float: left;
+    
+}
+
+.description {
+    width: 173px;
+    height: 200px;
+    margin-top: 5px;
+    
+}
+
+.image {
+    width: 173px;
+    height: 200px;
+    
+}
+
+.hidden {
+    display: none;
+}
