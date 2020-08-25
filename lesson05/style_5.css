@@ -1,0 +1,42 @@
+.chess {
+	display: table;
+}
+.cell {
+    display: table-cell;
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+}
+
+
+.chess .chess-tr:nth-child(odd) div:nth-child(odd) {
+	background: brown;
+}	
+.chess .chess-tr:nth-child(even) div:nth-child(even) {
+	background: brown;
+}
+
+.number {
+    display: table-cell;
+    height: 50px;
+    width: 10px;
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+.letter {
+    display: table-cell;
+    height: 10px;
+    width: 50px;
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+.corner {
+    display: table-cell;
+    height: 10px;
+    width: 10px;
+    background-color: none;
+
+}
+ 
