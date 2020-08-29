@@ -46,7 +46,7 @@ let basket = {
             removeButton.addEventListener('click', function(event) {
             basket.removePrd(event);
         });
-        console.log(basket);
+        
 })
     },
 
@@ -77,13 +77,11 @@ let basket = {
 
     sum(price) {
         this.totalPrice += price;
-        console.log(this.totalPrice);
         document.querySelector('.total').innerHTML = this.totalPrice;
         },
 
     del(price) {
         this.totalPrice -= price;
-        console.log(this.totalPrice);
         document.querySelector('.total').innerHTML = this.totalPrice;
         },
     
