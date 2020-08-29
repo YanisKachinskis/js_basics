@@ -29,14 +29,9 @@ cleaner.addEventListener('click', function () {
 })
 
 let basket = {
-    products: [],
     totalPrice: 0,
     count: 0,
     addPrd(idPrd, namePrd, pricePrd) {
-        this.products.push(
-            {id: idPrd,
-            name: namePrd,
-            price: pricePrd});
         ++this.count;
         this.sum(pricePrd);
         basketWindow.insertAdjacentHTML("beforeend", `<tr class='productLine' data-id='${this.count}'>
@@ -56,13 +51,12 @@ let basket = {
     },
 
     cleanAll() {
-        this.products = []
         basketWindow.innerHTML = `<table border='1' class='basket-window hidden'><tr>
                 <td>ID</td>
                 <td>Название</td>
                 <td>Цена</td>
                 <td>Колличество</td>
-                <td></td>
+                <td class='total'></td>
             </tr></table>`;
         this.totalPrice = 0;
     },
@@ -76,8 +70,7 @@ let basket = {
                         productLine.remove();
                         
             };
-        this.totalPrice -= p;
-        console.log(this.totalPrice);    
+            
         });
         
     },
