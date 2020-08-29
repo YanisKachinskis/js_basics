@@ -66,7 +66,7 @@ let basket = {
         
         productLines.forEach(function(productLine) {
             if (productLine.dataset.id === event.target.dataset.id) {
-                        this.del(Number(productLine.childNodes[5].innerHTML));
+                        basket.del(Number(productLine.childNodes[5].innerHTML));
                         productLine.remove();
                         
             };
