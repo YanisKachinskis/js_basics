@@ -1,0 +1,25 @@
+.product {
+    position: relative;
+    height: 300px;
+    width: 200px;
+    float: left;
+    
+}
+
+.image {
+    width: 173px;
+    height: 200px;
+    
+}
+
+.hidden {
+    display: none;
+}
+
+.basket-window {
+    position: absolute;
+    width: 400px;
+    left: 600px;
+    border: 1px solid black;
+}
+
