@@ -84,6 +84,7 @@ let basket = {
     del(price) {
         this.totalPrice -= price;
         console.log(this.totalPrice);
+        document.querySelector('.total').innerHTML = this.totalPrice;
         },
     
 };
