@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task_3</title>
+    <link rel="stylesheet" href="style_3.css">
+</head>
+<body>
+    <div class="products">
+        <div class="product">
+            <div class="name">Товар 1</div>
+            <img src="img/desperados3.JPG" class="image" alt="pic">
+            <div class="price">1000</div>
+            <button class="buy" data-id="1" data-price="1000" data-name="Товар 1">В корзину</button>
+        </div>
+        <div class="product">
+            <div class="name">Товар 2</div>
+            <img src="img/desperados3.JPG" class="image" alt="pic">
+            <div class="price">2000</div>
+            <button class="buy" data-id="2" data-price="2000" data-name="Товар 2">В корзину</button>
+        </div>
+        <div class="product">
+            <div class="name">Товар 3</div>
+            <img src="img/desperados3.JPG" class="image" alt="pic">
+            <div class="price"'>3000</div>
+            <button class="buy" data-id="3" data-price="3000" data-name="Товар 3">В корзину</button>
+        </div>
+        <button class="basket">Корзина</button>
+        <button class="cleaner hidden">Очистить</button>
+        <table class="basket-window hidden">
+            <tr>
+                <td>ID</td>
+                <td>Название</td>
+                <td>Цена</td>
+                <td>Колличество</td>
+                <td class="total"></td>
+            </tr>
+            
+        </table>
+    </div>
+    <script defer src="script_3.js"></script>
+</body>
+</html>
