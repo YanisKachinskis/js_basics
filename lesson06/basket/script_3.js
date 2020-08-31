@@ -34,13 +34,14 @@ let basket = {
     addPrd(idPrd, namePrd, pricePrd) {
         ++this.count;
         this.sum(pricePrd);
-        basketWindow.insertAdjacentHTML("beforeend", `<tr class='productLine' data-id='${this.count}'>
-                                                        <td>${idPrd}</td>
-                                                        <td>${namePrd}</td>
-                                                        <td>${pricePrd}</td>
-                                                        <td>1</td>
-                                                        <td><button class='removeBtn' data-id='${this.count}'>X</button></td>
-                                                    </tr>`);
+        let basketLine = `<tr class="productLine" data-id='${this.count}'>
+        <td>${idPrd}</td>
+        <td>${namePrd}</td>
+        <td>${pricePrd}</td>
+        <td>1</td>
+        <td><button class="removeBtn" data-id='${this.count}'>X</button></td>
+        </tr>`
+        basketWindow.insertAdjacentHTML("beforeend", basketLine);
         let removeButtons = document.querySelectorAll(".removeBtn");
         removeButtons.forEach(function(removeButton){
             removeButton.addEventListener('click', function(event) {
@@ -51,12 +52,12 @@ let basket = {
     },
 
     cleanAll() {
-        basketWindow.innerHTML = `<table border='1' class='basket-window hidden'><tr>
+        basketWindow.innerHTML = `<table class="basket-window hidden"><tr>
                 <td>ID</td>
                 <td>Название</td>
                 <td>Цена</td>
                 <td>Колличество</td>
-                <td class='total'></td>
+                <td class="total"></td>
             </tr></table>`;
         this.totalPrice = 0;
     },
@@ -66,23 +67,20 @@ let basket = {
         
         productLines.forEach(function(productLine) {
             if (productLine.dataset.id === event.target.dataset.id) {
-                        basket.del(Number(productLine.childNodes[5].innerHTML));
-                        productLine.remove();
-                        
+                basket.del(Number(productLine.childNodes[5].innerHTML));
+                productLine.remove();
             };
-            
         });
-        
     },
 
     sum(price) {
         this.totalPrice += price;
         document.querySelector('.total').innerHTML = this.totalPrice;
-        },
+    },
 
     del(price) {
         this.totalPrice -= price;
         document.querySelector('.total').innerHTML = this.totalPrice;
-        },
+    },
     
 };
